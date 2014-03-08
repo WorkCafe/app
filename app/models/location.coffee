@@ -1,8 +1,11 @@
 Location = DS.Model.extend
-  city: DS.attr()
-  country: DS.attr()
-  continent: DS.attr()
-
   venues: DS.hasMany('venue')
+
+  mapEmbed: ( ->
+    id = @get('id')
+    github_url = '//render.github.com/view/geojson'
+    our_json = '//embed.github.com/view/geojson/workcafe/app/master/data/locations/%@.json'.fmt(id)
+    '%@?url=%@'.fmt(github_url, our_json)
+  ).property('id')
 
 `export default Location`

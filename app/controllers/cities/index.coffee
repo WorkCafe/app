@@ -8,9 +8,9 @@ Controller = Ember.Controller.extend
       content
     else
       searchMatcher = new RegExp(searchValue, 'gi')
-      content.filter (location) ->
-        searchMatcher.test(location.get('city')) or
-        searchMatcher.test(location.get('country'))
+      content.filter (city) ->
+        searchMatcher.test(city.get('city')) or
+        searchMatcher.test(city.get('country'))
   ).property('searchValue', 'content.@each')
 
 `export default Controller`

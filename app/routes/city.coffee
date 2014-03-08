@@ -1,5 +1,5 @@
 Route = Ember.Route.extend
   redirect: (params) ->
-    @transitionTo('locations.show', params)
+    @transitionTo('cities.show', params)
 
 `export default Route`

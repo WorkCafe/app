@@ -1,5 +1,5 @@
 Route = Ember.Route.extend
-  model: (model) ->
-    @store.find('location')
+  model: (params) ->
+    @store.find('city')
 
 `export default Route`

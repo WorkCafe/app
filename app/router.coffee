@@ -1,8 +1,8 @@
 Router = Ember.Router.extend()
 
 Router.map ->
-  @route 'location', {path: '/:location_id'}
-  @resource 'locations', ->
-    @route 'show', {path: ':location_id'}
+  @route 'city', {path: '/:city_id'}
+  @resource 'cities', ->
+    @route 'show', {path: ':city_id'}
 
 `export default Router`
