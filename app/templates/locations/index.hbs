@@ -1,0 +1,40 @@
+<div class="page-header">
+  <div class="row">
+    <div class="col col-md-6">
+      <h4>
+        Available Locations
+        <small>
+          {{content.length}} found.
+        </small>
+      </h4>
+    </div>
+    <div class="col col-md-6">
+      <input type="search" class="form-control" placeholder="Search...">
+    </div>
+  </div>
+</div>
+
+<table class="locations-list table table-hover">
+  <thead>
+    <tr>
+      <th>City</th>
+      <th>Country</th>
+      <th>Continent</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+  {{#each location in content}}
+  <tr>
+    <td>{{location.city}}</td>
+    <td>{{location.country}}</td>
+    <td>{{location.continent}}</td>
+    <td>
+      {{#link-to 'locations.show' location}}
+      View venues
+      {{/link-to}}
+    </td>
+  </tr>
+  {{/each}}
+  </tbody>
+</table>
