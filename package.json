@@ -1,0 +1,23 @@
+{
+  "name": "workcafe-app",
+  "description": "WorkCafe Application",
+  "version": "0.0.1",
+  "author": "Stas Suscov <stas@nerd.ro> (http://github.com/stas)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/workcafe/app"
+  },
+  "dependencies": {
+    "broccoli": "~0.2.0",
+    "broccoli-cli": "0.0.1",
+    "broccoli-static-compiler": "0.0.5",
+    "broccoli-uglify-js": "0.0.4",
+    "broccoli-es6-concatenator": "0.0.7",
+    "broccoli-template": "0.0.5",
+    "broccoli-coffee": "0.0.6",
+    "broccoli-concat": "0.0.1",
+    "broccoli-less": "0.1.0",
+    "testem": "0.6.8"
+  }
+}
