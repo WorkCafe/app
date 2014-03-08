@@ -7,7 +7,6 @@ module.exports = function (broccoli) {
   var pickFiles = require('broccoli-static-compiler');
   var concatFiles = require('broccoli-concat');
   var env = process.env.BROCCOLI_ENV || 'development';
-
   function preprocess (tree) {
     tree = filterTemplates(tree, {
       extensions: ['hbs', 'handlebars'],
@@ -27,6 +26,11 @@ module.exports = function (broccoli) {
   // Static
   //
   var publicTree = broccoli.makeTree('public');
+  var apiDataTree = broccoli.makeTree('data');
+  apiDataTree = pickFiles(apiDataTree, {
+    srcDir: '/',
+    destDir: '/api/v1'
+  });
 
   //
   // Application
@@ -149,6 +153,6 @@ module.exports = function (broccoli) {
     appJs = testsJs;
   }
 
-  return [publicTree, appJs, appCss];
+  return [publicTree, appJs, appCss, apiDataTree];
 
 };

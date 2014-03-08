@@ -1,0 +1,34 @@
+{
+  "id": "cluj",
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "ragaz",
+        "title": "Răgaz",
+        "description": "http://ragaz.ro",
+        "address": "22-24, Decebal st.",
+        "opens_at": 9,
+        "closes_at": 23,
+        "special_weekend_hours": false,
+        "has_food": false,
+        "smoking_allowed": false,
+        "wifi_networks": 1,
+        "wifi_password": "ragaz123",
+        "loud_music": false,
+        "comfy_chairs": true,
+        "has_desks": false,
+        "has_toilet": true,
+        "bike_parking": true,
+        "car_parking": false,
+        "hosts_events": true,
+        "big_windows": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [46.777822, 23.589438]
+      }
+    }
+  ]
+}
