@@ -4,12 +4,12 @@
       <h4>
         Available Locations
         <small>
-          {{content.length}} found.
+          {{searchResults.length}} found.
         </small>
       </h4>
     </div>
     <div class="col col-md-6">
-      <input type="search" class="form-control" placeholder="Search...">
+      {{input type='search' value=searchValue class='form-control' placeholder='Search...'}}
     </div>
   </div>
 </div>
@@ -24,7 +24,7 @@
     </tr>
   </thead>
   <tbody>
-  {{#each location in content}}
+  {{#each location in searchResults}}
   <tr>
     <td>{{location.city}}</td>
     <td>{{location.country}}</td>
