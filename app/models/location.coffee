@@ -3,4 +3,6 @@ Location = DS.Model.extend
   country: DS.attr()
   continent: DS.attr()
 
+  venues: DS.hasMany('venue')
+
 `export default Location`

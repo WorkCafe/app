@@ -1,5 +1,94 @@
 <div class="page-header">
-  <h1>{{content.title}}</h1>
+  <div class="row">
+    <div class="col col-md-6">
+      <h4>
+        {{content.venues.length}} in {{content.city}}
+      </h4>
+    </div>
+    <div class="col col-md-6">
+      {{input type='search' value=searchValue class='venues-search form-control' placeholder='Search...'}}
+    </div>
+  </div>
 </div>
 
-List locations
+<table class="venues-list table table-hover">
+  <thead>
+    <tr>
+      <th>Details</th>
+      <th>Amenities</th>
+      <th>Infrastructure</th>
+    </tr>
+  </thead>
+  <tbody>
+  {{#each venue in searchResults}}
+  <tr>
+    <td>
+      <h4>
+        {{venue.title}}
+        <small>{{venue.address}}</small>
+      </h4>
+      <p>
+        {{venue.description}}
+      </p>
+
+      <ul>
+        <li>Opens at: {{venue.opensAt}}</li>
+        <li>Closes at: {{venue.closesAt}}</li>
+        {{#if venue.spechialWeekendHours}}
+        <li>Special weekend Hours</li>
+        {{/if}}
+      </ul>
+    </td>
+    <td>
+      <ul>
+        {{#if venue.hasFood}}
+        <li>Has food</li>
+        {{/if}}
+
+        {{#if venue.smokingAllowed}}
+        <li>Smoking allowed</li>
+        {{/if}}
+
+        <li>Wi-Fi networks: {{venue.wifiNetworks}}</li>
+        <li>Wi-Fi password: {{venue.wifiPassword}}</li>
+
+        {{#if venue.loudMusic}}
+        <li>Loud music</li>
+        {{/if}}
+
+        {{#if venue.bigWindows}}
+        <li>Big windows</li>
+        {{/if}}
+      </ul>
+    </td>
+    <td>
+      <ul>
+        {{#if venue.comfyChairs}}
+        <li>Comfy chairs</li>
+        {{/if}}
+
+        {{#if venue.hasDesks}}
+        <li>Has desks</li>
+        {{/if}}
+
+        {{#if venue.hasToilet}}
+        <li>Has toilet</li>
+        {{/if}}
+
+        {{#if venue.bikeParking}}
+        <li>Bike parking</li>
+        {{/if}}
+
+        {{#if venue.carParking}}
+        <li>Car parking</li>
+        {{/if}}
+
+        {{#if venue.hostsEvents}}
+        <li>Hosts events</li>
+        {{/if}}
+      </ul>
+    </td>
+  </tr>
+  {{/each}}
+  </tbody>
+</table>

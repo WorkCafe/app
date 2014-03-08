@@ -1,0 +1,22 @@
+Venue = DS.Model.extend
+  title: DS.attr()
+  description: DS.attr()
+  type: DS.attr()
+  address: DS.attr()
+  opensAt: DS.attr('number')
+  closesAt: DS.attr('number')
+  specialWeekendHours: DS.attr('boolean')
+  hasFood: DS.attr('boolean')
+  smokingAllowed: DS.attr('boolean')
+  wifiNetworks: DS.attr('number')
+  wifiPassword: DS.attr()
+  loudMusic: DS.attr('boolean')
+  comfyChairs: DS.attr('boolean')
+  hasDesks: DS.attr('boolean')
+  hasToilet: DS.attr('boolean')
+  bikeParking: DS.attr('boolean')
+  carParking: DS.attr('boolean')
+  hostsEvents: DS.attr('boolean')
+  bigWindows: DS.attr('boolean')
+
+`export default Venue`
