@@ -4,40 +4,19 @@ WorkCafe is a community maintained list of coffee shops/cafés friendly to work 
 
 Uses GeoJSON. Hosted on GitHub.
 
+Check [WorkCafe/workcafe.github.io](https://github.com/WorkCafe/workcafe.github.io) repository on how to add new venues and locations.
+
 [![Build Status](https://travis-ci.org/WorkCafe/app.png?branch=master)](https://travis-ci.org/WorkCafe/app)
 
-This is the application that powers the website.
+These are the application sources that power the website.
 
-It is written in Ember.js and uses Bootstrap.
-
+The application is written in Ember.js and uses Bootstrap.
 It is based on [Broccoli Boilerplate](https://github.com/iMedicare/emberjs-broccoli-boilerplate).
-
-## Contributions
-
-Edit the files inside the `data` repository and send a pull request.
-
-### Adding your city
-
-Edit the `data/cities.json` file.
-
-### Adding a new venue
-
-The city venue files use GeoJSON format.
-To find more about GeoJSON check [the GitHub help](https://help.github.com/articles/mapping-geojson-files-on-github).
-
-If your city venue file exists, you should find it inside the `data/locations/` folder.
-
-You will want to edit it and append a new entry to `features`.
-
-If you city does not exist, create a new one using the same filename as the city ID.
-
-Check the existing files for boilerplate data before creating a new file.
 
 ## Development
 
 You will need Node.js installed first.
-
-We use `nvm` to get Node up and running.
+Try `nvm` to get Node.js up and running easily.
 
 Once set, follow the installation steps:
 
@@ -79,7 +58,7 @@ $ BROCCOLI_ENV=production broccoli build ./dist
 
 ### Testing
 
-We are using QUnit to write tests.
+Tests are written using QUnit.
 
 Some simple conventions:
 
@@ -102,7 +81,8 @@ $ rm -rf ./build && BROCCOLI_ENV=test broccoli build ./build && testem ci -l pha
 
 ### Deployments
 
-There is another repository with the compiled files mapped to the `workcafe.in` domain name.
+There is another repository with the compiled files for `workcafe.in` domain name.
 
-Use Broccoli to make a production build.
-And overwrite the old files in the [workcafe.github.io](https://github.com/WorkCafe/workcafe.github.io) with the new ones.
+Follow these steps to deploy the latest version:
+* Use Broccoli to make a production build.
+* Overwrite the old files in the [workcafe.github.io](https://github.com/WorkCafe/workcafe.github.io) with the new ones.

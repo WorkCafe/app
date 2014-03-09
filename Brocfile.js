@@ -26,11 +26,6 @@ module.exports = function (broccoli) {
   // Static
   //
   var publicTree = broccoli.makeTree('public');
-  var apiDataTree = broccoli.makeTree('data');
-  apiDataTree = pickFiles(apiDataTree, {
-    srcDir: '/',
-    destDir: '/api/v1'
-  });
 
   //
   // Application
@@ -153,6 +148,6 @@ module.exports = function (broccoli) {
     appJs = testsJs;
   }
 
-  return [publicTree, appJs, appCss, apiDataTree];
+  return [publicTree, appJs, appCss];
 
 };
