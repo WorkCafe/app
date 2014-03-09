@@ -95,4 +95,4 @@ From command line, you can run the tests using `testem`:
 There is another repository with the compiled files mapped to the `workcafe.in` domain name.
 
 Use Broccoli to make a production build.
-And overwrite the old files in the [webpage](https://github.com/WorkCafe/webpage) with the new ones.
+And overwrite the old files in the [workcafe.github.io](https://github.com/WorkCafe/workcafe.github.io) with the new ones.
