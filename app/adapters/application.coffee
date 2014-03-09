@@ -7,4 +7,9 @@ Adapter = DS.ActiveModelAdapter.extend
         url = @_super(record, suffix)
         url + '.json'
 
+FixtureAdapter = DS.FixtureAdapter.extend()
+
+if window.ENV.development
+  Adapter = FixtureAdapter
+
 `export default Adapter`
