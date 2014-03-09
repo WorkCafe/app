@@ -1,7 +1,7 @@
 window.ENV.development = true
 
 window.ENV.FIXTURES = {
-  location: [
+  city: [
     {
       id: 'cluj',
       city: 'Cluj-Napoca',
@@ -14,6 +14,15 @@ window.ENV.FIXTURES = {
       city: 'București',
       country: 'România',
       continent: 'EU'
+    }
+  ],
+  location: [
+    {
+      id: 'cluj',
+      venues: ['ragaz', 'corso']
+    },
+    {
+      id: 'bucharest'
     }
   ],
   venue: [
@@ -36,6 +45,27 @@ window.ENV.FIXTURES = {
       bikeParking: true,
       carParking: false,
       hostsEvents: true,
+      bigWindows: true
+    },
+    {
+      id: 'corso',
+      title: 'Corso',
+      description: 'http://cafecorso.ro/',
+      address: '15th Unirii Square',
+      opensAt: 8,
+      closesAt: 1,
+      specialWeekendHours: true,
+      hasFood: true,
+      smokingAllowed: true,
+      wifiNetworks: 1,
+      wifiPassword: false,
+      loudMusic: false,
+      comfyChairs: true,
+      hasDesks: true,
+      hasToilet: true,
+      bikeParking: true,
+      carParking: true,
+      hostsEvents: false,
       bigWindows: true
     }
   ]
