@@ -4,7 +4,7 @@ Location = DS.Model.extend
   mapEmbed: ( ->
     id = @get('id')
     github_url = '//render.github.com/view/geojson'
-    our_json = '//raw.github.com/WorkCafe/app/master/data/locations/%@.json'.fmt(id)
+    our_json = '//raw.github.com/WorkCafe/workcafe.github.io/master/api/v1/locations/%@.json'.fmt(id)
     '%@?url=%@'.fmt(github_url, our_json)
   ).property('id')
 
