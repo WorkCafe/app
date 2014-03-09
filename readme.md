@@ -41,10 +41,12 @@ We use `nvm` to get Node up and running.
 
 Once set, follow the installation steps:
 
-    $ npm install -g bower
-    $ npm install -g broccoli-cli
-    $ npm install -g testem
-    $ npm install
+```sh
+$ npm install -g bower
+$ npm install -g broccoli-cli
+$ npm install -g testem
+$ npm install
+```
 
 Use `bower.json` to manage third-party dependencies.
 
@@ -64,12 +66,16 @@ of provided widgets and UI components as much as possible.
 
 Broccoli is our build tool. To run the development server use:
 
-    $ broccoli serve
+```sh
+$ broccoli serve
+```
 
 To build a release, use:
 
-    $ rm -rf dist
-    $ BROCCOLI_ENV=production broccoli build ./dist
+```sh
+$ rm -rf dist
+$ BROCCOLI_ENV=production broccoli build ./dist
+```
 
 ### Testing
 
@@ -82,13 +88,17 @@ Some simple conventions:
 
 To run the tests change the environment to `test` and run `broccoli`:
 
-    $ BROCCOLI_ENV=test broccoli serve
+```sh
+$ BROCCOLI_ENV=test broccoli serve
+```
 
 Open the browser, QUnit runner should start on its own.
 
 From command line, you can run the tests using `testem`:
 
-    $ rm -rf ./build && BROCCOLI_ENV=test broccoli build ./build && testem ci -l phantomjs,firefox
+```sh
+$ rm -rf ./build && BROCCOLI_ENV=test broccoli build ./build && testem ci -l phantomjs,firefox
+```
 
 ### Deployments
 
