@@ -9,15 +9,17 @@
     "url": "https://github.com/workcafe/app"
   },
   "dependencies": {
-    "broccoli": "~0.2.0",
-    "broccoli-cli": "0.0.1",
-    "broccoli-static-compiler": "0.0.5",
-    "broccoli-uglify-js": "0.0.4",
-    "broccoli-es6-concatenator": "0.0.7",
-    "broccoli-template": "0.0.5",
-    "broccoli-coffee": "0.0.6",
-    "broccoli-concat": "0.0.1",
-    "broccoli-less": "0.1.0",
-    "testem": "0.6.8"
+    "broccoli-merge-trees": "*",
+    "broccoli-template": "*",
+    "broccoli-bower": "*",
+    "broccoli-concat": "0.0.6"
+  },
+  "devDependencies": {
+    "ember-cli": "*",
+    "broccoli-cli": "*",
+    "broccoli-ember-hbs-template-compiler": "*",
+    "loom-generators-ember-appkit": "^1.1.1",
+    "broccoli-coffee": "*",
+    "broccoli-less": "*"
   }
 }
