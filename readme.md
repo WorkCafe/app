@@ -16,68 +16,58 @@ It is based on [Broccoli Boilerplate](https://github.com/iMedicare/emberjs-brocc
 ## Development
 
 You will need Node.js installed first.
-Try `nvm` to get Node.js up and running easily.
 
-Once set, follow the installation steps:
+You can use `nvm` to get Node up and running.
 
-```sh
-$ npm install -g bower
-$ npm install -g broccoli-cli
-$ npm install -g testem
-$ npm install
-```
+Once set, install `ember-cli` globally and the rest of the dependencies.
+
+    $ npm install -g ember-cli
+    $ npm install -g bower
+    $ npm install
+    $ bower install -F
 
 Use `bower.json` to manage third-party dependencies.
 
+### Conventions
+
 Inside the `app` folder, you will find an idiomatic Ember application structure.
 
-Use JavaScript ES6 syntax and CoffeeScript to write JavaScript.
+You can use JavaScript ES6 syntax and CoffeeScript to write JavaScript.
 
-Use Less to write CSS.
-
-The application has Twitter Bootstrap framework bundled. Make sure you make use
-of provided widgets and UI components as much as possible.
+You can use Less to write CSS.
+The application has Bootstrap CSS framework bundled. Feel free to use it.
 
 * [Less reference](http://lesscss.org/functions/)
 * [ES6 reference](https://github.com/square/es6-module-transpiler#supported-es6-module-syntax)
 
 ## Usage
 
-Broccoli is our build tool. To run the development server use:
+[Ember CLI](https://github.com/stefanpenner/ember-cli) is our build tool
+(which still uses Broccoli). To run the development server use:
 
-```sh
-$ broccoli serve
-```
+    $ ember serve
 
 To build a release, use:
 
-```sh
-$ rm -rf dist
-$ BROCCOLI_ENV=production broccoli build ./dist
-```
+    $ BROCCOLI_ENV=production ember build
+
+This will create a build in the `./dist` folder.
 
 ### Testing
 
-Tests are written using QUnit.
+We are using QUnit to write tests.
+Improved Ember.js testing support is provided through the
+[ember-qunit](https://github.com/rpflorence/ember-qunit) package.
 
-Some simple conventions:
+To run the tests change the environment to `test` and run:
 
-* Every feature needs an acceptance test
-* Unit test are mandatory for libraries or parts of the code with complex logic
-
-To run the tests change the environment to `test` and run `broccoli`:
-
-```sh
-$ BROCCOLI_ENV=test broccoli serve
-```
+    $ BROCCOLI_ENV=test ember serve
 
 Open the browser, QUnit runner should start on its own.
 
-From command line, you can run the tests using `testem`:
+From command line, you can run the:
 
-```sh
-$ rm -rf ./build && BROCCOLI_ENV=test broccoli build ./build && testem ci -l phantomjs,firefox
-```
+    $ BROCCOLI_ENV=test ember test
 
 ### Deployments
 
